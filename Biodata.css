@@ -1,0 +1,242 @@
+:root {
+   --button-color-toggling-to-night: rgb(24, 24, 24);
+   --button-color-toggling-to-day: rgb(202, 202, 202);
+   --color-of-navs-night: rgb(31, 31, 31);
+   --color-of-navs-day: rgb(121, 121, 121);
+   --color-of-text-descript-night: rgb(255, 243, 181);
+   --color-of-text-descript-day: rgb(40, 40, 40);
+   --color-of-text-night: white;
+   --color-of-text-day: black;
+   --line-through-night-day: black;
+   --default-night: rgb(44, 44, 44);
+   --default-day: rgb(200, 200, 200);
+}
+
+
+body {
+   background-color: var(--default-night);
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0px;
+   transition: background-color 0.4s, color 0.2s;
+}
+
+.for-change-animation-day {
+   color: var(--color-of-text-day);
+}
+
+.for-change-animation-night {
+   color: var(--color-of-text-night);
+}
+
+.color-label-day{
+   color: var(--color-of-text-descript-day);
+}
+
+.color-label-night{
+   color: var(--color-of-text-descript-night);
+}
+
+.color-font-day {
+   color: var(--color-of-text-day);
+}
+
+.color-font-night {
+   color: var(--color-of-text-night);
+}
+
+.body-night {
+   background-color: var(--default-night);
+}
+
+.body-day {
+   background-color: var(--default-day);
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   transition: background-color 0.4s;
+   position: fixed;
+   top: 0px;
+   right: 0px;
+   left: 0px;
+   z-index: 2;
+}
+
+.header-default {
+   background-color: var(--color-of-navs-night);
+}
+
+.header-day {
+   background-color: var(--color-of-navs-day);
+}
+
+header h1 {
+   margin-left: 20px;
+}
+
+nav {
+   align-content: center;
+   margin-right: 20px;
+}
+
+
+nav ul {
+   margin: 0px;
+   display: inline-block;
+}
+
+
+nav ul li {
+   display: inline-block;
+   list-style-type: none;
+   font-size: 20px;
+}
+
+.Educ-nav,
+.Skill-nav,
+.Personal-nav {
+   text-decoration: none;
+   color: var(--color-of-text-night);
+   padding: 25px 35px;
+   margin-right: 10px;
+   transition: box-shadow 0.2s;
+   border-radius: 0px 0px 10px 10px;
+   cursor: pointer;
+}
+
+button {
+   margin-right: 20px;
+   width: 80px;
+   height: 40px;
+   font-weight: 700;
+   cursor: pointer;
+   border-radius: 10px;
+   border: none;
+   transition: background-color 0.3s, color 0.3s;
+   position: fixed;
+   left: 94%;
+   top: 93%;
+}
+
+main {
+   padding-top: 80px;
+}
+
+.container-for-img {
+   display: flex;
+   justify-content: center;
+}
+
+.container-for-img img {
+   border-radius: 400px;
+   width: 450px;
+   height: 450px;
+}
+
+.container-for-details {
+   display: grid;
+   justify-content: center;
+   padding-top: 40px;
+}
+
+.container-for-details h2 {
+   text-align: justify;
+   font-weight: lighter;
+   width: 600px;
+   border-bottom: 1px solid black;
+   padding-bottom: 19px;
+}
+
+.labels-night1,
+.labels-night2,
+.labels-night3 {
+   font-weight: bold;
+   color: var(--color-of-text-descript-night);
+}
+
+.labels-day {
+   font-weight: bold;
+   color: var(--color-of-text-descript-day);
+}
+
+.school-journey {
+   display: grid;
+   justify-content: center;
+}
+
+.school-journey-night {
+   background: radial-gradient(circle, rgba(171,171,171,1) 0%, rgba(0,0,0,0.9327380610447304) 31%, rgba(0,0,0,1) 100%);
+   background-attachment: fixed;
+}
+
+.school-journey-day {
+   background: radial-gradient(circle, rgba(171,171,171,1) 0%, rgba(246,245,245,0.9887604700083158) 0%, rgba(57,57,57,0.999964951801033) 100%);
+   background-attachment: fixed;
+}
+
+.school-journey section {
+   text-align: center;
+   border-bottom: 1px solid var(--line-through-night-day);
+   align-self: center;
+   margin-bottom: 20px;
+}
+
+.Tech-Skills {
+   display: grid;
+   justify-content: center;
+   text-align: center;
+   grid-template-columns: 500px;
+   padding-top: 50px;
+   font-size: 20px;
+}
+
+.for-centering img  {
+   width: 300px;
+   text-align: center;
+   padding-left: 20px;
+}
+
+
+i,
+.Tech-Skills div:last-child i {
+   width: 90px;
+   background-color: var(--line-through-night-day);
+   height: 2px;
+}
+
+
+.Tech-Skills div:nth-child(2) {
+   padding-bottom: 30px;
+   border-bottom: 2px solid var(--line-through-night-day);
+}
+
+
+/* For Buttons including Navs when the mouse hovers*/
+
+.button-hover-day {
+   background-color: var(--button-color-toggling-to-day);
+   color: black;
+}
+
+.button-hover-day:hover {
+   background-color: var(--button-color-toggling-to-night);
+   color: white;
+}
+
+.button-hover-night {
+   background-color: var(--button-color-toggling-to-night);
+   color: white;
+}
+
+.button-hover-night:hover {
+   background-color: var(--button-color-toggling-to-day);
+   color: black;
+}
+
+.activehover:hover,
+.active {
+   box-shadow: 0.1px 2px 5px black;
+}
+
+
